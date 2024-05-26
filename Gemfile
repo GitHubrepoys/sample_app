@@ -5,6 +5,9 @@ ruby "3.2.4"
 
 gem "rails",           "7.0.4.3"
 gem "bcrypt",          "3.1.18"
+gem 'faker',           '2.20.0'
+gem 'will_paginate',           '3.3.1'
+gem 'bootstrap-will_paginate', '1.0.0'
 gem "bootstrap-sass",  "3.4.1"
 gem "sassc-rails",     "2.1.2"
 gem "sprockets-rails", "3.4.2"
@@ -38,5 +41,8 @@ group :test do
   gem "guard-minitest",           "2.4.6"
 end
 
+group :production do
+  gem "pg", "1.3.5"
+end
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
 #gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
